@@ -8,6 +8,16 @@
 
 Provide IAM credentials to containers running inside a kubernetes cluster based on annotations.
 
+## IMDSv2
+
+This version code fixed to working with IMDSv2  
+
+### How to build Docker for multiple arch  
+
+```bash
+docker buildx build --progress plain --platform linux/amd64,linux/arm64 -t <ACCOUNTID>.dkr.ecr.<REGION>.amazonaws.com/<REPO_NAME>:<TAG> --push -o type=registry .
+```
+
 ## Context
 
 Traditionally in AWS, service level isolation is done using IAM roles. IAM roles are attributed through instance
